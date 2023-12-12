@@ -190,27 +190,51 @@ export default function Home() {
         </div>
       </div>
       <div className="flex w-max mx-auto my-3">
-        <TypingEffect key={1} text="Save The Date" speed={200} className={`${marcellus.variable} font-alex-brush text-lg text-[#5A5F4F] text-center`} animationVariant={animationVariantsTextLeft} />
+        <motion.p className={`${marcellus.variable} font-alex-brush text-lg text-[#5A5F4F] text-center`} initial="initial" animate="animate" variants={animationVariantsTextLeft}>
+          Save The Date
+        </motion.p>
       </div>
       <div className="flex w-max mx-auto">
         <div className='w-[300px] flex flex-col gap-3 justify-center'>
-          <TypingEffect key={4} text="Desember" speed={100} className={`${marcellus.variable} font-marcellus text-lg text-[#5A5F4F] text-center`} animationVariant={animationVariantsTextLeft} />
+          <motion.p className={`${marcellus.variable} font-marcellus text-lg text-[#5A5F4F] text-center`} initial="initial" animate="animate" variants={animationVariantsTextLeft}>
+            Desember
+          </motion.p>
           <div className='flex gap-4 mx-auto'>
-            <div className='border-y-2 border-[#F1CEAD]'>
-              <TypingEffect key={5} text="&nbsp;SUNDAY&nbsp;" speed={200} className={`${marcellus.variable} mt-1 font-marcellus text-lg text-[#5A5F4F] text-left`} animationVariant={animationVariantsTextRight} />
-            </div>
-            <TypingEffect key={5} text="24" speed={100} className={`${marcellus.variable} font-marcellus text-4xl font-bold text-[#5A5F4F] text-center`} animationVariant={animationVariantsTextRight} />
-            <div className='border-y-2 border-[#F1CEAD]'>
-              <TypingEffect key={5} text="AT 10 AM" speed={200} className={`${marcellus.variable} mt-1 font-marcellus text-lg text-[#5A5F4F] text-left`} animationVariant={animationVariantsTextRight} />
-            </div>
+            <motion.div initial="initial" animate="animate" variants={animationVariantsTextRight} className='border-y-2 border-[#F1CEAD]'>
+              <p className={`${marcellus.variable} mt-1 font-marcellus text-lg text-[#5A5F4F] text-left`}>
+                &nbsp;SUNDAY&nbsp;
+              </p>
+            </motion.div>
+            <motion.p className={`${marcellus.variable} font-marcellus text-4xl font-bold text-[#5A5F4F] text-center`} initial="initial" animate="animate" variants={animationVariantsTextRight}>
+              24
+            </motion.p>
+            <motion.div initial="initial" animate="animate" variants={animationVariantsTextRight} className='border-y-2 border-[#F1CEAD]'>
+              <p className={`${marcellus.variable} mt-1 font-marcellus text-lg text-[#5A5F4F] text-left`}>
+                AT 10 AM
+              </p>
+            </motion.div>
           </div>
-          <TypingEffect key={4} text="2023" speed={100} className={`${marcellus.variable} font-marcellus text-lg text-[#5A5F4F] text-center`} animationVariant={animationVariantsTextLeft} />
+          <motion.p className={`${marcellus.variable} font-marcellus text-lg text-[#5A5F4F] text-center`} initial="initial" animate="animate" variants={animationVariantsTextLeft}>
+            2023
+          </motion.p>
         </div>
       </div>
       <div className='flex flex-col mx-auto w-[300px] mt-6'>
         <motion.span variants={animationVariantsFadeRight} initial="initial" animate="animate" className={`${marcellus.variable} font-marcellus text-center font-medium text-[#5A5F4F] w-[300px] mx-auto`}>MASJID RAMLIE MUSOFA</motion.span>
         <Link href={'https://maps.app.goo.gl/RABYeKv41gSmx8DE8'} target='_blank' passHref={true} className='text-center'>
           <motion.span variants={animationVariantsFadeRight} initial="initial" animate="animate" className={`${marcellus.variable} font-marcellus text-sm text-center text-[#5A5F4F] w-[300px] mx-auto underline`}>Jl. Danau Sunter Utara Raya Selatan No.12C - 14A, RT.13/RW.16, Sunter Agung, Kec. Tj. Priok, Jkt Utara, Daerah Khusus Ibukota Jakarta</motion.span>
+        </Link>
+      </div>
+      <div className="text-center mt-4 z-50 relative">
+        <Link href='/gallery'>
+          <motion.button type="button" className="inline-flex items-center text-white bg-gradient-to-r from-stone-500 via-stone-600 to-stone-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-stone-300 shadow-lg shadow-stone-500/50 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2" variants={animationVariantsFadeRight} initial="initial" animate="animate">
+            <span>
+              Our Gallery
+            </span>
+            <svg className="w-3.5 h-3.5 ms-1 mt-[0.2px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+            </svg>
+          </motion.button>
         </Link>
       </div>
     </div>

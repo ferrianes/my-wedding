@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <NextTopLoader color='#5A5F4F' />
-        <div className="container mx-auto max-w-md bg-[url(/assets/background.png)] bg-cover bg-center h-screen overflow-hidden relative">
+        <div className="container mx-auto max-w-md bg-[url(/assets/background.png)] bg-cover bg-center min-h-screen overflow-hidden relative">
           {children}
         </div>
       </body>
