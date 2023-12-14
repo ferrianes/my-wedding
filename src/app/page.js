@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { motion, AnimateSharedLayout, useAnimation } from "framer-motion"
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 
 const alexBrush = Alex_Brush({
   subsets: ['latin'],
@@ -172,11 +173,11 @@ const TypingEffectBackward = ({ text, speed, className, animationVariant }) => {
 const first = {
   initial: {
     opacity: 0,
-    x: 70,
+    y: 70,
   },
   animate: {
     opacity: 1,
-    x: 0,
+    y: 0,
     transition: {
       delay: 0,
       duration: 3,
@@ -210,7 +211,7 @@ const third = {
     opacity: 1,
     x: 0,
     transition: {
-      delay: 1,
+      delay: 2,
       duration: 2,
       ease: 'easeOut',
     }
@@ -226,7 +227,7 @@ const fourth = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 1.5,
+      delay: 2,
       duration: 2,
       ease: 'easeOut',
     }
@@ -252,13 +253,13 @@ const fifth = {
 const sixth = {
   initial: {
     opacity: 0,
-    x: -70
+    // x: -70
   },
   animate: {
     opacity: 1,
-    x: 0,
+    // x: 0,
     transition: {
-      delay: 2.5,
+      delay: 3.5,
       duration: 2,
       ease: 'easeOut',
     }
@@ -284,11 +285,11 @@ const seventh = {
 const eighth = {
   initial: {
     opacity: 0,
-    x: -70,
+    // y: 70,
   },
   animate: {
     opacity: 1,
-    x: 0,
+    // y: 0,
     transition: {
       delay: 3.5,
       duration: 3,
@@ -330,17 +331,15 @@ const tenth = {
 }
 
 export default function Home() {
-  const [name, setName] = useState()
+  // get query params
+  const params = useSearchParams();
 
   return (
     <div>
       <div className="flex flex-col pt-[4%]">
         <div className='mx-auto relative'>
-          <motion.div variants={first} initial="initial" animate="animate">
-            <Image src="/assets/backdrop-flower.webp" width="300" height="300" alt="backdrop flower" />
-          </motion.div>
-          <motion.div className='absolute -top-[10px] right-[6.5px]' variants={second} initial="initial" animate="animate">
-            <Image src="/assets/we.png" width="280" height="280" alt="we" />
+          <motion.div className="-ml-7" variants={first} initial="initial" animate="animate">
+            <Image src="/assets/we.webp" width="300" height="300" alt="backdrop flower" />
           </motion.div>
         </div>
       </div>
@@ -353,10 +352,12 @@ export default function Home() {
           <TypingEffectBackward key={3} text="Ferrian" speed={200} className={`${alexBrush.variable} font-alex-brush text-6xl text-[#5A5F4F] text-right`} animationVariant={fifth} />
         </div>
       </div>
-      <div className="flex flex-col mt-4">
-        <TypingEffect key={4} text="Dear:" speed={100} className={`${marcellus.variable} font-marcellus text-2xl text-[#5A5F4F] text-center`} animationVariant={sixth} />
-        <TypingEffectBackward key={5} text="xxx" speed={100} className={`${marcellus.variable} font-marcellus text-2xl text-[#5A5F4F] text-center`} animationVariant={seventh} />
-      </div>
+      <motion.div variants={sixth} initial="initial" animate="animate" className="flex flex-col mt-2">
+        <span text="Dear:" className={`${marcellus.variable} font-marcellus text-2xl text-[#5A5F4F] text-center`}>
+          Dear:
+        </span>
+        <span className={`${marcellus.variable} font-marcellus text-2xl text-[#5A5F4F] text-center`}>{params.get('to')}</span>
+      </motion.div>
       <div className="text-center mt-4 z-50 relative">
         <Link href="/intro">
           <motion.button type="button" className="text-white bg-gradient-to-r from-stone-500 via-stone-600 to-stone-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-stone-300 shadow-lg shadow-stone-500/50 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2" variants={eighth} initial="initial" animate="animate">

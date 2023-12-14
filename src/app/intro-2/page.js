@@ -102,15 +102,15 @@ const first = {
 const second = {
   initial: {
     opacity: 0,
-    x: -70
+    // y: 40
   },
   animate: {
     opacity: 1,
-    x: 0,
+    // y: 0,
     transition: {
       delay: 2,
       duration: 2,
-      ease: 'easeOut',
+      ease: 'backInOut',
     }
   }
 }
@@ -118,13 +118,13 @@ const second = {
 const third = {
   initial: {
     opacity: 0,
-    x: 70,
+    // x: 70,
   },
   animate: {
     opacity: 1,
-    x: 0,
+    // x: 0,
     transition: {
-      delay: 2,
+      delay: 3,
       duration: 3,
       ease: 'backInOut',
     },
@@ -140,22 +140,6 @@ const fourth = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 3,
-      duration: 3,
-      ease: 'backInOut',
-    },
-  },
-}
-
-const fifth = {
-  initial: {
-    opacity: 0,
-    x: -70,
-  },
-  animate: {
-    opacity: 1,
-    x: 0,
-    transition: {
       delay: 4,
       duration: 3,
       ease: 'backInOut',
@@ -163,7 +147,7 @@ const fifth = {
   },
 }
 
-const sixth = {
+const fifth = {
   initial: {
     opacity: 0,
     y: 70,
@@ -179,27 +163,75 @@ const sixth = {
   },
 }
 
+const sixth = {
+  initial: {
+    opacity: 0,
+    y: 70,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 6,
+      duration: 3,
+      ease: 'backInOut',
+    },
+  },
+}
+
+const seventh = {
+  initial: {
+    opacity: 0,
+    // x: -70,
+  },
+  animate: {
+    opacity: 1,
+    // x: 0,
+    transition: {
+      delay: 7,
+      duration: 3,
+      ease: 'backInOut',
+    },
+  },
+}
+
+const eighth = {
+  initial: {
+    opacity: 0,
+    y: 70,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 1,
+      duration: 3,
+      ease: 'backInOut',
+    },
+  },
+}
+
 export default function Intro() {
 
   return (
     <div className=''>
       <motion.div variants={first} initial="initial" animate="animate">
-        <Image className='absolute top-0 left-[120px]' src="/assets/top-flower.png" height="150" width="200" alt="flower" />
+        <Image className='absolute top-0 left-[100px]' src="/assets/top-flower.png" height="150" width="200" alt="flower" />
       </motion.div>
-      <div className="flex flex-col pt-[22%] z-50 relative">
+      <div className="flex flex-col pt-28 z-50 relative">
         <motion.h1 variants={second} initial="initial" animate="animate" className={`${granada.variable} font-granada text-3xl text-center text-[#5A5F4F]`}>بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</motion.h1>
         <motion.span variants={third} initial="initial" animate="animate" className={`${marcellus.variable} font-marcellus leading-7 text-sm text-center text-[#5A5F4F] w-[320px] mx-auto mt-6`}>Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud mengundang Bapak/Ibu/Saudara/i dalam acara pernikahan kami</motion.span>
-        <motion.div variants={fourth} initial="initial" animate="animate" className='w-[300px] text-center mx-auto mt-8 space-y-1 '>
-          <p className={`${alexBrush.variable} font-alex-brush text-[#AA6C42] text-2xl`}>Chintia Aprilini S.M <br /> (Tia)</p>
+        <div className='w-[300px] text-center mx-auto mt-7 space-y-1 '>
+          <motion.p variants={fourth} initial="initial" animate="animate" className={`${alexBrush.variable} font-alex-brush text-[#AA6C42] text-3xl`}>Chintia Aprilini S.M <br /> (Tia)</motion.p>
           {/* <p className={`${marcellus.variable} font-marcellus text-[#5A5F4F] text-sm`}>Putri pertama dari <br /> Bapak Taufik & Ibu Sutini</p> */}
-          <p className={`${alexBrush.variable} font-alex-brush text-[#AA6C42] text-2xl`}>&</p>
-          <p className={`${alexBrush.variable} font-alex-brush text-[#AA6C42] text-2xl`}>Ferrian Eka Septiawan S.Kom <br /> (Rian)</p>
+          <motion.p variants={fifth} initial="initial" animate="animate" className={`${alexBrush.variable} font-alex-brush text-[#AA6C42] text-3xl`}>&</motion.p>
+          <motion.p variants={sixth} initial="initial" animate="animate" className={`${alexBrush.variable} font-alex-brush text-[#AA6C42] text-3xl`}>Ferrian Eka Septiawan S.Kom <br /> (Rian)</motion.p>
           {/* <p className={`${marcellus.variable} font-marcellus text-[#5A5F4F] text-sm`}>Putra pertama dari <br /> Bapak Ichwan & Ibu Sri Handayani</p> */}
-        </motion.div>
+        </div>
       </div>
       <div className="text-center mt-4 z-50 relative">
         <Link href="/intro-3">
-          <motion.button type="button" className="inline-flex items-center text-white bg-gradient-to-r from-stone-500 via-stone-600 to-stone-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-stone-300 shadow-lg shadow-stone-500/50 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2" variants={fifth} initial="initial" animate="animate">
+          <motion.button type="button" className="inline-flex items-center text-white bg-gradient-to-r from-stone-500 via-stone-600 to-stone-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-stone-300 shadow-lg shadow-stone-500/50 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2" variants={seventh} initial="initial" animate="animate">
             <span>
               Next
             </span>
@@ -210,8 +242,8 @@ export default function Intro() {
         </Link>
       </div>
 
-      <div className='absolute bottom-0'>
-        <motion.div variants={sixth} initial="initial" animate="animate">
+      <div className=''>
+        <motion.div variants={eighth} initial="initial" animate="animate">
           <Image className='' src="/assets/bottom-flower.png" height="150" width="500" alt="flower" />
         </motion.div>
       </div>

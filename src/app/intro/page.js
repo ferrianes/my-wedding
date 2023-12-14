@@ -194,7 +194,7 @@ const second = {
     opacity: 1,
     x: 0,
     transition: {
-      delay: 0.2,
+      delay: 1,
       duration: 3,
       ease: 'backInOut',
     },
@@ -226,7 +226,7 @@ const fourth = {
     opacity: 1,
     x: 0,
     transition: {
-      delay: 1.5,
+      delay: 3,
       duration: 2,
       ease: 'easeOut',
     }
@@ -242,7 +242,7 @@ const fifth = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 2,
+      delay: 3,
       duration: 2,
       ease: 'easeOut',
     }
@@ -258,7 +258,7 @@ const sixth = {
     opacity: 1,
     x: 0,
     transition: {
-      delay: 2.5,
+      delay: 3,
       duration: 2,
       ease: 'easeOut',
     }
@@ -274,7 +274,7 @@ const seventh = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: 2.7,
+      delay: 4,
       duration: 3,
       ease: 'backInOut',
     },
@@ -284,13 +284,13 @@ const seventh = {
 const eighth = {
   initial: {
     opacity: 0,
-    x: -70,
+    // x: -70,
   },
   animate: {
     opacity: 1,
-    x: 0,
+    // x: 0,
     transition: {
-      delay: 3,
+      delay: 5,
       duration: 3,
       ease: 'backInOut',
     },
@@ -306,7 +306,7 @@ const ninth = {
     opacity: 1,
     x: 0,
     transition: {
-      delay: 3.2,
+      delay: 0,
       duration: 3,
       ease: 'backInOut',
     },
@@ -319,7 +319,7 @@ export default function Intro() {
       <motion.div variants={first} initial="initial" animate="animate">
         <Image className='absolute top-0 right-0' src="/assets/top-right-flower.png" height="150" width="150" alt="flower" />
       </motion.div>
-      <div className="flex flex-col pt-[16%] relative">
+      <div className="flex flex-col pt-28 relative">
         <motion.h1 variants={second} initial="initial" animate="animate" className={`${marcellus.variable} font-marcellus text-3xl text-center text-[#5A5F4F]`}>The Wedding Of</motion.h1>
         <div className='mx-auto relative mt-3'>
           <motion.div variants={third} initial="initial" animate="animate">
@@ -330,7 +330,7 @@ export default function Intro() {
 
             <TypingEffect key={2} text="&" speed={200} className={`${alexBrush.variable} font-alex-brush text-4xl leading-[0.6] text-[#AA6C42] text-center`} animationVariant={fifth} />
 
-            <TypingEffectBackward key={3} text="Rian" speed={200} className={`${alexBrush.variable} font-alex-brush text-6xl text-[#5A5F4F] text-right`} animationVariant={sixth} />
+            <TypingEffectBackward key={3} text="Rian" speed={200} className={`${alexBrush.variable} font-alex-brush text-6xl text-[#5A5F4F] text-right mt-1`} animationVariant={sixth} />
           </div>
         </div>
       </div>
@@ -355,7 +355,7 @@ export default function Intro() {
         </Link>
       </div>
 
-      <div className='absolute bottom-0 left-0'>
+      <div className=''>
         <motion.div variants={ninth} initial="initial" animate="animate">
           <Image className='' src="/assets/bottom-left-flower.png" height="150" width="150" alt="flower" />
         </motion.div>

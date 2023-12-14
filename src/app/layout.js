@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
 import NextTopLoader from 'nextjs-toploader'
+import BackgroundMusic from '@/components/BackgroundMusic'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,8 +15,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <NextTopLoader color='#5A5F4F' />
-        <div className="container mx-auto max-w-md bg-[url(/assets/background.png)] bg-cover bg-center min-h-screen overflow-hidden relative">
+        <div className="container mx-auto max-w-md bg-[url(/assets/background.png)] bg-cover bg-center h-full overflow-hidden relative">
+          <BackgroundMusic src="/assets/song.mp3" />
           {children}
+
+          {/* floating music play rounded button */}
         </div>
       </body>
     </html>
