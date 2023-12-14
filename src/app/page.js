@@ -335,8 +335,8 @@ export default function Home(props) {
   const params = useSearchParams();
   const router = useRouter();
 
-  const onClick = () => {
-    audio.play()
+  const onClick = async () => {
+    await audio.play()
     router.push('/intro');
   }
 
