@@ -317,7 +317,7 @@ export default function Intro() {
   return (
     <div className=''>
       <motion.div variants={first} initial="initial" animate="animate">
-        <Image className='absolute top-0 right-0' src="/assets/top-right-flower.png" height="150" width="150" alt="flower" />
+        <Image className='absolute top-0 right-0' src="/assets/top-right-flower.webp" height="150" width="150" alt="flower" />
       </motion.div>
       <div className="flex flex-col pt-28 relative">
         <motion.h1 variants={second} initial="initial" animate="animate" className={`${marcellus.variable} font-marcellus text-3xl text-center text-[#5A5F4F]`}>The Wedding Of</motion.h1>
@@ -337,7 +337,7 @@ export default function Intro() {
       <div className="flex w-max mx-auto">
         <div className="w-[300px]">
           <motion.p className={`${marcellus.variable} font-marcellus text-base text-[#5A5F4F] text-center`} variants={seventh} initial="initial" animate="animate">
-            “Tidak ada solusi yang lebih sempurna dari pernikahan untuk dua orang yang saling mencintai” <br />
+            “Tidak ada solusi yang lebih sempurna dari akad untuk dua orang yang saling mencintai” <br />
             (HR. Ibnu Majah)
           </motion.p>
         </div>
@@ -357,7 +357,7 @@ export default function Intro() {
 
       <div className=''>
         <motion.div variants={ninth} initial="initial" animate="animate">
-          <Image className='' src="/assets/bottom-left-flower.png" height="150" width="150" alt="flower" />
+          <Image className='' src="/assets/bottom-left-flower.webp" height="150" width="150" alt="flower" />
         </motion.div>
       </div>
     </div>

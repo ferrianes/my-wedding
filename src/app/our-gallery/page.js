@@ -21,11 +21,11 @@ const marcellus = Marcellus({
 const animationVariantsFadeRight = {
   initial: {
     opacity: 0,
-    y: -70,
+    x: -70,
   },
   animate: {
     opacity: 1,
-    y: 0,
+    x: 0,
     transition: {
       duration: 3,
       ease: 'backInOut',
@@ -351,16 +351,15 @@ export default function Home() {
   return (
     <div>
       <motion.div className='w-full relative' variants={animationVariantsFadeUp} initial="initial" animate="animate">
-        <motion.span variants={animationVariantsFadeRight} initial="initial" animate="animate" className='bg-[#c4c2bc] border border-yellow-300 ring-2 rounded-tr-none ring-amber-200 shadow-md absolute p-3 mx-8 mt-8 rounded-xl'>
+        <motion.span variants={animationVariantsFadeRight} initial="initial" animate="animate" className='bg-[#b3c4c2bc] shadow-md absolute p-3 mx-8 mt-8 rounded-xl'>
           <p className={`${marcellus.variable} font-marcellus text-center  text-[#5A5F4F]`}>
-            Terima kasih atas perhatian, dukungan, doa, dan restu yang telah diberikan <br />
-            kepada kami. <br />
+            Terima kasih atas dukungan, doa, serta restu yang diberikan. <br />
             Semoga kebaikan serta keberkahan <br />
             senantiasa menyertai kita semua. <br />
             Aamiin Ya Rabball Alamin.
           </p>
         </motion.span>
-        <Image src="/assets/bg-gallery.png" width={100} height={100} layout='responsive' alt="backdrop flower" />
+        <Image src="/assets/bg-gallery.webp" width={100} height={100} layout='responsive' alt="backdrop flower" />
       </motion.div>
     </div>
   )

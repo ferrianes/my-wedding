@@ -216,11 +216,11 @@ export default function Intro() {
   return (
     <div className=''>
       <motion.div variants={first} initial="initial" animate="animate">
-        <Image className='absolute top-0 left-[100px]' src="/assets/top-flower.png" height="150" width="200" alt="flower" />
+        <Image className='absolute top-0 left-[100px]' src="/assets/top-flower.webp" height="150" width="200" alt="flower" />
       </motion.div>
       <div className="flex flex-col pt-28 z-50 relative">
         <motion.h1 variants={second} initial="initial" animate="animate" className={`${granada.variable} font-granada text-3xl text-center text-[#5A5F4F]`}>بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</motion.h1>
-        <motion.span variants={third} initial="initial" animate="animate" className={`${marcellus.variable} font-marcellus leading-7 text-sm text-center text-[#5A5F4F] w-[320px] mx-auto mt-6`}>Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud mengundang Bapak/Ibu/Saudara/i dalam acara pernikahan kami</motion.span>
+        <motion.span variants={third} initial="initial" animate="animate" className={`${marcellus.variable} font-marcellus leading-7 text-sm text-center text-[#5A5F4F] w-[320px] mx-auto mt-6`}>Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud mengundang Bapak/Ibu/Saudara/i dalam acara akad kami</motion.span>
         <div className='w-[300px] text-center mx-auto mt-7 space-y-1 '>
           <motion.p variants={fourth} initial="initial" animate="animate" className={`${alexBrush.variable} font-alex-brush text-[#AA6C42] text-3xl`}>Chintia Aprilini S.M <br /> (Tia)</motion.p>
           {/* <p className={`${marcellus.variable} font-marcellus text-[#5A5F4F] text-sm`}>Putri pertama dari <br /> Bapak Taufik & Ibu Sutini</p> */}
@@ -242,9 +242,9 @@ export default function Intro() {
         </Link>
       </div>
 
-      <div className=''>
+      <div>
         <motion.div variants={eighth} initial="initial" animate="animate">
-          <Image className='' src="/assets/bottom-flower.png" height="150" width="500" alt="flower" />
+          <Image src="/assets/bottom-flower.webp" height="150" width="500" alt="flower" />
         </motion.div>
       </div>
     </div >

@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { motion, AnimateSharedLayout, useAnimation } from "framer-motion"
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { useSearchParams } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 
 const alexBrush = Alex_Brush({
   subsets: ['latin'],
@@ -330,9 +330,15 @@ const tenth = {
   },
 }
 
-export default function Home() {
+export default function Home(props) {
   // get query params
   const params = useSearchParams();
+  const router = useRouter();
+
+  const onClick = () => {
+    audio.play()
+    router.push('/intro');
+  }
 
   return (
     <div>
@@ -359,14 +365,14 @@ export default function Home() {
         <span className={`${marcellus.variable} font-marcellus text-2xl text-[#5A5F4F] text-center`}>{params.get('to')}</span>
       </motion.div>
       <div className="text-center mt-4 z-50 relative">
-        <Link href="/intro">
+        <div onClick={onClick}>
           <motion.button type="button" className="text-white bg-gradient-to-r from-stone-500 via-stone-600 to-stone-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-stone-300 shadow-lg shadow-stone-500/50 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2" variants={eighth} initial="initial" animate="animate">
             <TypingEffect key={6} text="Open Invitation" speed={200} animationVariant={ninth} />
           </motion.button>
-        </Link>
+        </div>
       </div>
       <motion.div className='' variants={tenth} initial="initial" animate="animate">
-        <Image src="/assets/bottom-home.png" height="300" width="500" alt="flower" />
+        <Image src="/assets/bottom-home.webp" height="300" width="500" alt="flower" />
       </motion.div>
     </div>
   )

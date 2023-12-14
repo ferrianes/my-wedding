@@ -352,13 +352,13 @@ export default function Home() {
     <div>
       <div>
         <motion.div className='w-full' variants={first} initial="initial" animate="animate">
-          <Image src="/assets/top-flower-2.png" width={100} height={100} layout='responsive' alt="backdrop flower" />
+          <Image src="/assets/top-flower-2.webp" width={100} height={100} layout='responsive' alt="backdrop flower" />
         </motion.div>
       </div>
       <div className="flex flex-col">
         <div className='mx-auto relative'>
           <motion.div className="-ml-7" variants={second} initial="initial" animate="animate">
-            <Image src="/assets/we.webp" width="300" height="300" alt="backdrop flower" />
+            <Image src="/assets/we.webp" width="200" height="200" alt="backdrop flower" />
           </motion.div>
         </div>
       </div>

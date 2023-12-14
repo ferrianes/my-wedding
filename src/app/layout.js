@@ -15,10 +15,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <NextTopLoader color='#5A5F4F' />
-        <div className="container mx-auto max-w-md bg-[url(/assets/background.png)] bg-cover bg-center h-full overflow-hidden relative">
-          <BackgroundMusic src="/assets/song.mp3" />
-          {children}
-
+        <div className="container mx-auto max-w-md bg-[url(/assets/background.webp)] bg-cover bg-center h-[100dvh] overflow-hidden relative">
+          <BackgroundMusic src="/assets/song.mp3" children={children} />
           {/* floating music play rounded button */}
         </div>
       </body>
