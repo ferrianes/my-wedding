@@ -11,7 +11,7 @@ export const metadata = {
   openGraph: {
     title: 'Chintia & Ferrian',
     description: 'Wedding Invitation',
-    images: ['/favicon.ico']
+    images: ['/assets/opengraph-image.png', '/assets/opengraph-image.alt.png', '/assets/twitter-image.png', '/assets/twitter-image.alt.png']
   },
 }
 
